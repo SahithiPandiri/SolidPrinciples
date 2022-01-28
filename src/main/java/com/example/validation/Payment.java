@@ -1,9 +1,9 @@
 package com.example.validation;
 
 public class Payment implements PaymentDetails{
-    PaymentProcessing pp;
+    PaymentProcessing paymentTool;
     public Payment(PaymentProcessing pp){
-        this.pp=pp;
+        this.paymentTool=pp;
     }
    public  void getPrice(){
         System.out.print("The Price of the Book is");
@@ -15,18 +15,18 @@ public class Payment implements PaymentDetails{
     public void paymentMethod(String method) {
 
        if(method.equalsIgnoreCase("Gpay")){
-           pp.gpay();
+           paymentTool.gpay();
 
            }
        else if(method.equalsIgnoreCase("phonepay")){
-           pp.phonePay();
+           paymentTool.phonePay();
 
        }
        else if(method.equalsIgnoreCase("paytm")){
-           pp.paytm();
+           paymentTool.paytm();
        }
        else if(method.equalsIgnoreCase("cash")){
-           pp.cash();
+           paymentTool.cash();
        }
        else{
            System.out.print("No Payment through "+method+" is accepted");

@@ -3,9 +3,11 @@ package com.example.validation;
 class ReadOnly extends AddingBook{
     Availability a;
     ReadOnly(){
+
         Availability a;
     }
     ReadOnly(Availability a){
+
         this.a=a;
     }
     void readBook(){
